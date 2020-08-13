@@ -1,6 +1,8 @@
 body {
+  position: relative;
   font-family: "Raleway", sans-serif;
   scroll-behavior: smooth;
+  cursor: none;
 }
 
 #home {
@@ -22,6 +24,33 @@ body {
   height: fit-content;
 }
 
+.cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #c6c6c6;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  transform: translate(-50%,-50%);
+  transition: .1s;
+  scroll-behavior: smooth;
+}
+
+.cursor2 {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background-color: #c6c6c6;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  transform: translate(-50%,-50%);
+  scroll-behavior: smooth;
+}
+
 ::selection {
   color: #607D8B;
 }
@@ -31,7 +60,7 @@ body {
 }
 
 .scroll-down {
-  position: absolute;
+  position: sticky;
   bottom: 10px;
   left: 50%;
   width: 40px;
@@ -151,7 +180,7 @@ a {
 
 a:hover {
   text-decoration: none;
-  cursor: pointer;
+  cursor: inherit;
   color: #6c757d;
 }
 
@@ -486,6 +515,7 @@ li.python::after {
 /* Do an horizontal flip when you move the mouse over the flip box container */
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
+  cursor: pointer;
 }
 
 /* Position the front and back side */
@@ -589,6 +619,7 @@ li.python::after {
   align-items: center;
   align-content: center;
   margin-top: 15px;
+  cursor: none;
 }
 
 .fa-facebook {
@@ -668,6 +699,8 @@ a span {
   color: #6c757d;
   margin-left: 10px;
   font-size: 20px;
+  cursor: none;
+  pointer-events: none;
 }
 
 a.button1{

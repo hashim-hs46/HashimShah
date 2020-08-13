@@ -22,7 +22,8 @@
 </head>
 
 <body>
-
+  <div class="cursor"></div>
+  <div class="cursor2"></div>
   <section id="home">
     <div class="scroll-down" id="arrow">
       <span></span>
@@ -385,6 +386,27 @@
         });
       }, false);
     })();
+    </script> 
+    <script>
+      var cursor = document.getElementById('cursor');
+      document.addEventListener('mousemove',
+      function(e){
+        var x = e.clientX;
+        var y = e.clientY + document.body.scrollLeft;
+        console.log(document.body.s)
+        cursor.style.left = x + "px";
+        cursor.style.top = y + "px";
+      });
+    </script>
+
+    <script>
+      var cursor = document.querySelector(".cursor");
+      var cursor = document.querySelector(".cursor2");
+      document.addEventListener("mousemove", function(e){
+        cursor.style.cssText = cursor.style.cssText = "Left: " + e.clientX +
+         "px; top: " + e.clientY + "px;";
+      });
+
     </script>
 
   <script src="./js/index.js"></script>
