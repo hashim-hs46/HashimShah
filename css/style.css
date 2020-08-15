@@ -176,18 +176,17 @@ a {
   color: #6c757d;
   width: 120px;
   padding: 20px;
+  cursor: none;
 }
 
 a:hover {
   text-decoration: none;
-  cursor: inherit;
   color: #6c757d;
 }
 
 .list {
   font-weight: bold;
   width: 120px;
-  cursor: pointer;
   list-style-type: none;
   font-size: 20px;
   padding-bottom: 20px;
@@ -500,7 +499,7 @@ li.python::after {
   background-color: transparent;
   width: 300px;
   height: 300px;
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  perspective: 1000px;
 }
 
 .flip-card-inner {
@@ -512,19 +511,16 @@ li.python::after {
   transform-style: preserve-3d;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
-  cursor: pointer;
 }
 
-/* Position the front and back side */
 .flip-card-front,
 .flip-card-back {
   position: absolute;
   width: 300px;
   height: 100%;
-  -webkit-backface-visibility: hidden; /* Safari */
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
@@ -545,6 +541,7 @@ li.python::after {
   align-items: center;
   align-content: center;
   display: grid;
+  cursor: pointer;
 }
 
 .cards-h1 {
@@ -569,12 +566,10 @@ li.python::after {
   font-size: 28px;
   width: 150px;
   transition: all 0.5s;
-  cursor: pointer;
   margin: 5px;
 }
 
 .button span {
-  cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
@@ -699,7 +694,6 @@ a span {
   color: #6c757d;
   margin-left: 10px;
   font-size: 20px;
-  cursor: none;
   pointer-events: none;
 }
 
@@ -718,12 +712,66 @@ a.button1{
   background-color: #FFE57F;
 }
 a.button1:hover{
-color:#FFE57F;
-background-color:#2f2f2f;
+  cursor: none;
+  color:#FFE57F;
+  background-color:#2f2f2f;
 }
+
 @media all and (max-width:30em){
  a.button1{
-display:block;
-margin:0.4em auto;
+  display:block;
+  margin:0.4em auto;
 }
+}
+
+.submit-button {
+  justify-content: start;
+  text-align: center;
+  align-items: flex-start;
+  display: flex;
+  margin-left: -20px;
+
+}
+
+.cv {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  display: flex; 
+  margin-left: -120px; 
+}
+
+.button2 {
+  border-radius: 4px;
+  width: 100px;
+  height: 35px;
+  border: none;
+  color: #2f2f2f;
+  background-color: #FFE57F;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  display: flex;
+  line-height: normal;
+}
+
+.button2:hover {
+  color: #FFE57F;
+  background-color: #2f2f2f; 
+}
+
+.button3 {
+  border-radius: 4px;
+  width: 200px;
+  height: 35px;
+  border: none;
+  color: #2f2f2f;
+  background-color: #FFE57F;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  display: flex;
+  line-height: normal;
 }
