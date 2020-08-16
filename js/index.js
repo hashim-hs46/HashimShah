@@ -49,7 +49,7 @@ $(document).ready(function ($) {
                     size: 150,
                     thickness: 15,
                     fill: {
-                        color: '#FF80AB'
+                        color: '#00ddff'
                     }
                 }).on('circle-animation-progress', function (event, progress, stepValue) {
                     $(this).find('div').text((stepValue * 100).toFixed(1) + "%");
